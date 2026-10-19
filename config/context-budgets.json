@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "measurement": "utf8_lf",
+  "limits": {
+    "warm": {
+      "label": "START",
+      "warning": 5400,
+      "block": 6000
+    },
+    "dashboard": {
+      "label": "START + CURRENT + PRIORITERINGER",
+      "warning": 16000,
+      "block": 19000,
+      "absolute": 21600
+    },
+    "route": {
+      "label": "Normal målrettet rute",
+      "warning": 19200,
+      "block": 21600,
+      "absolute": 24000
+    },
+    "registry": {
+      "label": "Register",
+      "warning": 12000,
+      "block": 16000
+    },
+    "case_hub": {
+      "label": "Sakshub",
+      "warning": 11000,
+      "block": 14000
+    },
+    "depth": {
+      "label": "Dybde, historikk og manifest",
+      "warning": 16000,
+      "block": 20000
+    },
+    "agents": {
+      "label": "AGENTS.md",
+      "block": 6500,
+      "comparison": ">"
+    },
+    "chat_bootstrap": {
+      "label": "CHATGPT-START.md",
+      "block": 10000,
+      "comparison": ">"
+    },
+    "current": {
+      "label": "CURRENT alene",
+      "block": 12000,
+      "comparison": ">"
+    },
+    "priorities": {
+      "label": "PRIORITERINGER alene",
+      "block": 9000,
+      "comparison": ">"
+    }
+  },
+  "instruction_max_characters": 1500,
+  "extra_routes": [
+    {
+      "name": "Dagsvalg",
+      "files": [
+        "context/START.md",
+        "arbeid/UKA.md",
+        "arbeid/OPPGAVER.md"
+      ]
+    }
+  ]
+}
